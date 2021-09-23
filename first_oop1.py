@@ -15,26 +15,26 @@ class MyFirstClass:
 
 
 print()
-print(f'обращаюсь к статическому атрибуту x1 класса {MyFirstClass.__name__}')
+print(f'обращаюсь к статическому атрибуту "x1" класса "{MyFirstClass.__name__}"')
 print(f'{MyFirstClass.x1 = }')
 print()
 
 a = MyFirstClass()
-print(f'создаю объект {a.get_obj_name()} и обращаюсь к его атрибуту x1 двумя способами')
+print(f'создаю объект "{a.get_obj_name()}" и обращаюсь к его атрибуту "x1" двумя способами')
 print(f'{a.x1 = }  ...  {a.__getattribute__("x1") = }')
 print()
 
-print(f'меняю значение атрибута x1 объекта {a.get_obj_name()} и обращаюсь к нему двумя способами')
+print(f'меняю значение атрибута "x1" объекта "{a.get_obj_name()}" и обращаюсь к нему двумя способами')
 a.x1 = 123
 print(f'{a.x1 = }  ...  {a.__getattribute__("x1") = }')
 print()
 
-print(f'меняю в классе {MyFirstClass.__name__} атрибут и обращаюсь к нему')
+print(f'меняю в классе "{MyFirstClass.__name__}" атрибут и обращаюсь к нему')
 MyFirstClass.x1 = 333
 print(f'{MyFirstClass.x1 = }')
 print()
 
-# обращаюсь к атрибуту объекта
+print(f'обращаюсь к атрибуту объекта')
 print(f'{a.x1 = }  ...  {a.__getattribute__("x1") = }')
 print()
 
