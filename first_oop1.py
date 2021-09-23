@@ -38,9 +38,12 @@ print(f'обращаюсь к атрибуту объекта')
 print(f'{a.x1 = }  ...  {a.__getattribute__("x1") = }')
 print()
 
-# print(f'{a.x1 = }')
-# a.x1 = 223344
-# print(f'{a.x1 = }')
+for val in list(globals()):
+    print(f'globals()[{val}] = {type(globals()[val])}, {globals()[val]}')
 
-# for val in list(globals()):
-#     print(f' globals()[{val}] = {type(globals()[val])}, {globals()[val]}')
+print()
+
+for glob_name, glob_val in list(globals().items()):
+    print(glob_name, glob_val)
+
+print()
