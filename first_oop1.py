@@ -39,11 +39,12 @@ print(f'{a.x1 = }  ...  {a.__getattribute__("x1") = }')
 print()
 
 for val in list(globals()):
-    print(f'globals()[{val}] = {type(globals()[val])}, {globals()[val]}')
+    print(f'globals()[{val}] = {globals()[val]}   ...   {type(globals()[val]) = }')
 
 print()
 
 for glob_name, glob_val in list(globals().items()):
-    print(glob_name, glob_val)
+    if '__' not in glob_name:
+        print(glob_name, glob_val)
 
 print()
