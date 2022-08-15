@@ -1,19 +1,22 @@
 class MyFirstClass:
-    # статический атрибут
+    ''' описание класса __doc__ '''
+
+    # статический атрибут, свойство класса
     x1 = 000
 
     def __init__(self):
-        # динамические атрибуты
+        # динамические атрибуты, свойства экземпляра
         self.x1 = 111
         self.x2 = 222
         self.x3 = 333
-        self._y1 = 'protect1'
-        self.__y2 = 'privat1'
+        self._y1 = 'protect1'  #  защищённый атрибут
+        self.__y2 = 'privat1'  #  приватный атрибут
 
     def get_obj_name(self):
         for glob_name, glob_val in globals().items():
             if glob_val is self:
                 return glob_name
+
 
 if __name__ == '__main__':
     print(MyFirstClass.__dict__)
